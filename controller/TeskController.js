@@ -58,6 +58,17 @@ const updateOneTask = async (req, res) => {
     }
   };
 
+const deleteOneTask = async (req, res) => {
+  try{
+    await Task.deleteOne({ _id: req.params.id });
+    res.redirect("/");
+  } catch (err){
+    res.status(500).send({ error: err.message });
+  }
+};
+
+
+
 
 
 module.exports = {
@@ -65,4 +76,5 @@ module.exports = {
     createTask,
     getById,
     updateOneTask,
+    deleteOneTask,
 };//controller metodo da rota
