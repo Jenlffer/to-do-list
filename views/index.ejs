@@ -7,21 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <header>
+    <% if (task == null){%>
+
+    
       <form action="/create" method="post">
         <input type="text" name="task" id="task" placeholder="Insira">
         <button type="submit" id="adicionar" >Adicionar</button>
       </form>
+      <% }else{ %>
+      <form action="/updateOne/<%= task._id %>" method="post">
+        <input type="text" name="task" id="task" value="<%= task.task %>" >
+        <button type="submit" id="adicionar" > Atualizar</button>
+      </form>
+      <% } %>
+  </header>
 
+     <section id="tasks">
+      <ul>
+        <% tasksList.forEach((task) =>{ %>
+        <li>
 
-      
-        <ul>
-          <% tasksList.forEach((task) =>{ %>
-          <li>
-                 <%= task.task %>  | <%= task.date.toLocaleDateString 
-                 ('pt-BR') %>
-          </li>
-            <% }) %>
-        </ul>
+               <%= task.task %>  | <%= task.date.toLocaleDateString 
+               ('pt-BR') %>
+               <a href="/getById/<%= task._id %>/update">Editar</a>
+               
+               <a href= "/getById/<%= task._id %>/delete">Apagar</a>
+        </li>
+          <% }) %>
+      </ul>
+     </section>
+       
+     <% if(taskDelete != null){%>
+    <section id="modal">
+    <div id="card">
+
+      <a href=""></a>
+      <h2>Configuraçoes</h2>
+      <hr>
+      <p>Desseja realmente excluir a tarefa: <%= taskDelete.task %> ?</p>
+      <a href="">Não</a>
+      <a href="/deleteTask/<%= taskDelete._id %>">sim</a>
+    </div>  
+    
+    </section> 
+    <% } %>
      
      
 
