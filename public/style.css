@@ -1,3 +1,231 @@
-h1{
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, arial;
 }
+
+body{
+    background-color: #808C91;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+header{
+    background-color: #B3E67E;
+    padding: 3rem;
+    margin: .5rem;
+    text-align: center;
+    
+}
+
+header h1{
+    padding: 3rem;
+
+}
+
+input{
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 70%;
+    padding: .6rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: #3c3f3a;
+    color: #fff;
+}
+
+button{
+    padding: .6rem;
+    width: 25%;
+    background-color: #E6B47E;
+    color: white;
+    text-align: center;
+    font: 1rem;
+    cursor: pointer;
+    border-radius: none;
+    border: none;
+    outline: none;
+    transition: all .3s ease-out;
+    font-size: 1rem;
+
+}
+
+button:hover{
+    background-color: violet;
+}
+
+section#tasks{
+    margin: .5rem;
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+ul li{
+  position: relative;
+  padding: 1rem ;
+  background-color: #a07445 ;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  
+}
+
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul li  span{
+    color: #ccc;
+    font-style: italic;
+    font-size: .8rem;
+    padding-left: 1rem;
+}
+
+ul li div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul li:nth-child(odd){
+    background-color: #8f765c;
+}
+
+ul li:hover{
+    background-color: rgb(160, 143, 160);
+}
+
+
+a.btnupdate{
+    padding: .5rem;
+    text-decoration: none;
+    color: #ccc;
+}
+
+a.btnupdate:hover{
+    background-color: #3643f4;
+    color: #fff;
+}
+
+a.btndelete{
+    padding: .5rem;
+    text-decoration: none;
+    color: #ccc;
+}
+
+a.btndelete:hover{
+    background-color: red;
+    color: #fff;
+}
+
+
+section#modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+
+}
+
+div#card{
+    width: 30rem;
+    position: relative;
+    background-color: #808C91;
+}
+
+div#head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+div#card h2{
+ 
+    margin: 0;
+    
+}
+
+div#card a#close{
+   
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 1.5rem;
+
+}
+
+div#card hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+div#card p {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+
+div#btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+div#btns a{
+    text-decoration: none;
+    padding:  .5rem;
+    width: 7rem;
+    text-align: center;
+    background-color: #808C91;
+    font-size:1.5rem ;
+}
+
+div#btns a#btnnot{
+    color: red;
+    border: solid 1px red;
+    margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+div#btns a#btnnot:hover{
+    background-color: red;
+    color: white;
+}
+
+div#btns a#btnyes{
+    color: rgba(0, 255, 136, 0.568);
+    border: solid 1px rgb(22, 201, 61);
+    transition: all 0.3s ease-in-out;
+}
+
+div#btns a#btnyes:hover{
+    background-color: rgb(87, 241, 112);
+    color: white;
+}
+
+
+
