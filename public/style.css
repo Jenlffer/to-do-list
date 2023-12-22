@@ -6,14 +6,15 @@
 }
 
 body{
-    background-color: #808C91;
+    background-color: #212c30;
     width: 100%;
     height: 100%;
     color: #fff;
+   
 }
 
 header{
-    background-color: #B3E67E;
+    background-color: #3A67F0;
     padding: 3rem;
     margin: .5rem;
     text-align: center;
@@ -33,14 +34,14 @@ input{
     padding: .6rem;
     font-size: 1rem;
     outline: none;
-    background-color: #3c3f3a;
-    color: #fff;
+    background-color: #e7ece3;
+    color: #333030;
 }
 
 button{
     padding: .6rem;
     width: 25%;
-    background-color: #E6B47E;
+    background-color: #3AA1F0;
     color: white;
     text-align: center;
     font: 1rem;
@@ -70,7 +71,7 @@ ul{
 ul li{
   position: relative;
   padding: 1rem ;
-  background-color: #a07445 ;
+  background-color: #2f79b1;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -84,6 +85,7 @@ ul li{
 ul li a{
     text-decoration: none;
     color: #fff;
+    padding-left: 2rem;
 }
 
 ul li  span{
@@ -100,11 +102,11 @@ ul li div{
 }
 
 ul li:nth-child(odd){
-    background-color: #8f765c;
+    background-color: #3AA1F0;
 }
 
 ul li:hover{
-    background-color: rgb(160, 143, 160);
+    background-color: rgb(130, 164, 236);
 }
 
 
@@ -115,7 +117,7 @@ a.btnupdate{
 }
 
 a.btnupdate:hover{
-    background-color: #3643f4;
+    background-color: #CBF0C9;
     color: #fff;
 }
 
@@ -149,7 +151,7 @@ section#modal{
 div#card{
     width: 30rem;
     position: relative;
-    background-color: #808C91;
+    background-color: #3AA1F0;
 }
 
 div#head{
@@ -199,7 +201,7 @@ div#btns a{
     padding:  .5rem;
     width: 7rem;
     text-align: center;
-    background-color: #808C91;
+    background-color: #3AA1F0;
     font-size:1.5rem ;
 }
 
@@ -217,7 +219,7 @@ div#btns a#btnnot:hover{
 }
 
 div#btns a#btnyes{
-    color: rgba(0, 255, 136, 0.568);
+    color: rgba(14, 255, 86, 0.568);
     border: solid 1px rgb(22, 201, 61);
     transition: all 0.3s ease-in-out;
 }
@@ -226,6 +228,72 @@ div#btns a#btnyes:hover{
     background-color: rgb(87, 241, 112);
     color: white;
 }
+
+.message {
+    padding: 1rem;
+    position: sticky;
+    top: 0 ;
+    z-index: 9999;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+
+}
+
+.message-danger{
+    background-color: rgb(255,197, 197);
+    color: #8a0000;
+  }
+  
+  .message-success {
+    background-color: rgb(197, 255, 214);
+    color: #008a1e;
+  }
+
+  span#close-message{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+    padding-left: 2rem;
+  }
+  
+  span#close-message:hover {
+    color: rgb(255, 0, 0);
+  }
+  
+  ul li.check-true{
+    background-color: #888888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  ul li a.check-true::before{
+    content: "";
+    position: absolute;
+    border: #fff solid;
+    top: 17px;
+    left: 16px;
+    height: 15px;
+    width: 7px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  ul li a.check-false::before{
+    content: "";
+    position: absolute;
+    border: #fff solid;
+    top: 20px;
+    left: 16px;
+    height: 13px;
+    width: 13px;
+    border-width: 2px;
+  }
 
 
 
