@@ -2,7 +2,7 @@
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "projeto para iniciar nodejs",
-  "main": "index.js",
+  "main": "index.ejs",
   "engines": {
     "node": "18.x"
   },
